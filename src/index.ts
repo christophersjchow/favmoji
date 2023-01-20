@@ -36,7 +36,7 @@ export default {
                     Use emojis (Twemoji) as a favicon in your project.
                   </p>
 
-                  <p class="font-mono whitespace-pre pt-20">&lt;link rel=&quot;icon&quot; href=&quot;https://yourdomain.workers.dev/&lt;emoji&gt;&quot; /&gt;</p>
+                  <p class="font-mono whitespace-pre pt-10">&lt;link rel=&quot;icon&quot; href=&quot;https://yourdomain.workers.dev/💻️ /&gt;</p>
                 </div>
               </div>
             </section>
