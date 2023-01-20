@@ -1,12 +1,16 @@
-you can use this worker to set emoji favicons for your web app easily using `<link/>` or `<meta/>` tags.
+# favmoji
 
-example - 
+Use [Twemoji](https://twemoji.twitter.com/) as favicons using link tags. Forked from https://github.com/asrvd/favmoji
+and configured for automatic deployment for my use.
+
+## Deployment
+
+WIP
+
+## Using favicons
+
 ```html
-...
 <head>
-    <link rel="icon" href="https://fmj.asrvd.me/😂"/> 
+  <link rel="icon" href="https://yourdomain.zone.workers.dev/😂" />
 </head>
-...
 ```
-
-it converts the emoji passed as query to twemoji and sends it as svg response.

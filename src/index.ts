@@ -2,26 +2,29 @@ import { parse } from "twemoji-parser";
 
 export interface Env {}
 
+const domain = "https://favmoji.chowie.net";
+
 export default {
   async fetch(
     request: Request,
-    env: Env,
-    ctx: ExecutionContext
+    _env: Env,
+    _ctx: ExecutionContext
   ): Promise<Response> {
     const url = new URL(request.url);
     const path = decodeURIComponent(url.pathname).replace("/", "");
+
     if (path.length === 0) {
       return new Response(
         `
         <head>
           <title>favmoji</title>
           <meta charset="utf-8">
-          <link rel="icon" href="https://favmoji.asheeshh.ga/🌸" />
+          <link rel="icon" href="${domain}/🌸" />
         </head>
         <body>
           <pre>
-            <p>example request: <a href="https://favmoji.asheeshh.ga/🌸">https://favmoji.asheeshh.ga/🌸</a></p>
-            <p>example usage as favicon: &lt;link rel="icon" href="https://favmoji.asheeshh.ga/🌸" /&gt;</p>
+            <p>example request: <a href="${domain}🌸">${domain}/🌸</a></p>
+            <p>example usage as favicon: &lt;link rel="icon" href="${domain}/🌸" /&gt;</p>
           </pre>
         </body>
         <style>
@@ -29,7 +32,7 @@ export default {
             text-decoration: none;
           }
         </style>
-      `,
+        `,
         {
           headers: {
             "content-type": "text/html; charset=utf-8",
