@@ -9,6 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     name: Deploy
+    if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
       - uses: actions/checkout@v3
       - name: Publish
